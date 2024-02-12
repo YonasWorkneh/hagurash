@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../Resources/CSS/dash.css">
+  <link rel="icon" href="../../Resources/Images/favicon.png">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <script src="../../App/controllers/Script/dash__script.js" defer></script>
+  <title>Dashboard | Hagurash</title>
+</head>
+<body>
+  <div class="hero">
+      <div class="sidebar">
+        <img class="logo"src="../../Resources/Images/Logo.png" alt="logo.png">
+        <ul class="nav">
+          <li class="over active"data-class="overview"><i class='bx bxs-grid-alt'></i> Overview</li>
+          <li class="rec"data-class="recipes"><i class="fa-solid fa-burger"></i> Recipes</li>
+          <li class="vids"data-class="videos"><i class="fa-solid fa-camera-retro"></i> Videos</li>
+          <li class="cust" data-class="customers"><i class="fa-solid fa-user-group"></i> Customers</li>
+          <li class="comm" data-class="comments"><i class="fa-solid fa-envelope"></i> Comments</li>
+          <li class="prof" data-class="admin_profile"><i class="fa-solid fa-user"></i> Profile</li>
+          <li class="dark"><i class="fa-solid fa-moon"></i> Dark mode 
+            <label class="toggle-switch">
+            <input type="checkbox">
+            <div class="toggle-switch-background">
+              <div class="toggle-switch-handle"></div>
+            </div>
+          </label>
+        </li>
+        </ul>
+
+      </div>
+      <div class="main">
+        <div class="heading">
+          <div>
+            <h1>Hi ! Welcome Back</h1>
+            <p>Hagurash, a place where you can enjoy finger licking food made by yourself.</p>
+          </div>
+        <img class="woma"src="../../Resources/Images/woma.png" alt="woman enjoying a beautiful meal">
+        </div>
+        <div class="dash__detail">
+          <div class="detail overview">
+            <div class="totals">
+              <div class="total total__cust">
+                <p>Total Customers</p>
+                <span class="cust__num">2000</span>
+              </div>
+              <div class="total total__bookmarks">
+                <p>Total Bookmarks</p>
+                <span class="bookmark__total">4000</span>
+              </div>
+              <div class="total total__recipes">
+                <p>Total Recipes</p>
+                <span class="cust__num">+100,000</span>
+              </div>
+            </div>
+            <div class="growth">
+              <div class="bookmark__growth">
+                <p>Bookmark  Growth</p>
+                <div class="growth__wrap">
+                  <div>
+                    <span class="perc__growth">+ 76%</span><br>
+                    <span>from last quarter</span>
+                  </div>
+                  <div>
+                    <span class="grow grow__1"><span class="fill">2270</span></span>
+                    <span class="grow grow__2"><span class="fill"></span></span>
+                    <span class="grow grow__3"><span class="fill"></span></span>
+                    <span class="grow grow__4"><span class="fill">4000</span></span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="detail recipes hidden">
+            <h2>Popular Recipes</h2>
+            <div class="recipes__wrapper">
+              <div class="recipes__wrap"></div>
+            </div>
+          </div>
+          <div class="detail videos hidden">
+            <h3>Trending Videos</h3>
+            <div class="videos__wrapper">
+              <div class="videos__wrap"></div>
+            </div>
+          </div>  
+          <div class="detail customers hidden">
+            <div class="cust__header">
+              <div class="heading__left">
+                <h4>Customer List</h4>
+                <p>Customer data that has been registered !</p>
+              </div>
+              <div class="heading__right">
+                <div>
+                  <p class="booked">Bookmarked</p>
+                  <p class="stat__book">1000 <span class="perc__book">20%</span></p>
+                </div>
+                <div>
+                  <p class="not__booked">Not Bookmarked</p>
+                  <p class="stat__nobook">2000 <span class="perc__nobook">39%</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="cust__main">
+              <div class="cust__profile">
+                <i class="fa fa-user"></i><span>Profile</span>
+              </div>
+              <div class="cust__contact">
+                <i class="fa-solid fa-address-book"></i><span>Contact</span>
+              </div>
+              <div class="cust__status">
+                <i class="fa-solid fa-bolt"></i><span>Status</span>
+              </div>
+            </div>
+            <div class="cust__list"></div>
+          </div>
+          <div class="detail comments hidden">
+            <div>
+              <h5>User Comments</h5>
+              <div class="comm__header">
+                <p>Name</p>
+                <p>Contact</p>
+                <p>Subject</p>
+              </div>
+              <div class="comm__list"></div>
+            </div>
+          </div>
+          <div class="detail admin_profile hidden">
+            <h6>Manage Account</h6>
+            <div class="admin_profile_wrap">
+              <div>
+                <div class="input"> 
+                  <label for="admin_name">Name: </label>
+                  <input type="text" class="admin__name" id="admin_name">
+              </div>
+              <div class="input">
+                <label for="admin_email">Email: </label>
+                <input type="email" class="admin__email" id="admin_email">
+              </div>
+              <div class="input">
+                <label for="admin_pass">Password: </label>
+                <input type="password" class="admin_pass" id="admin_pass">
+              </div>
+              <button class="save" type="submit">Save</button>
+              </div>
+              <div>
+                <input type="file" id="profile__img" accept="image/*">
+                <div class="admin_img">
+                  <img src="../../Resources/Images/admin.png" alt="admin">
+                  <label for="profile__img"><i class="fa-solid fa-pen"></i></label>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="left">
+        <div class="profile">
+          <img class="admin_img" src="../../Resources/Images/admin.png" alt="admin avatar">
+          <div>
+            <span class="admin_name"></span>
+            <span class="admin_email"></span>
+          </div>
+        </div>
+        <div class="date">
+          <span class="date"></span>
+          <span class="hour"></span>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

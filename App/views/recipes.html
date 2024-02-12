@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../Resources/CSS/recipe.css" />
+    <link rel="icon" href="../../Resources/Images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="../controllers/Script/recipe__script.js" defer></script>
+    <title>Recipes & Menus | Hagurash</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class='nav-toggler'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="hidden">
+        <button class="menu-close">&times;</button>
+        <a href="#" class="logo"><img src="../../Resources/Images/Logo.png" alt="Hagurash Logo.png"/></a>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" style="color:#ffbd59">Recipes & Menus</a></li>
+          <li><a href="video.html">Videos</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div>
+            <span class="follow">Follow <span style="color:#ffbd59">Hagurash!</span></span>
+            <a href="https://www.facebook.com/hagurash"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/hagurash"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/hagurash"><i class="fa-brands fa-twitter"></i></a><br>
+            <a href="login.html"><button class="sign-inn">Sign In</button></a>
+          </div>
+      </nav>
+      <header class="header">
+        <img
+          src="../../Resources/Images/Logo.png"
+          alt="Logo"
+          class="header__logo"
+          width="100px"
+          height="100px"
+        />
+
+        <!-- search recipes -->
+        <form class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search over 1,000,000 recipes..."
+          />
+          <button class="btn search__btn">
+            <span> 🔍 Search </span>
+          </button>
+        </form>
+
+        <!-- add recipes and bookmarks -->
+        <div class="add_recipes_bookmarks">
+          <!-- add recipes -->
+          <div class="add_recipe_btn_top_list">
+            <button class="addrecipe_btn_click">
+              <i class="fa-light fa-plus">
+                <span class="addrecipe_text"> ADD RECIPES</span></i
+              >
+            </button>
+          </div>
+          <!-- add bookmark -->
+          <div class="bookmark_recipe_bookmark">
+            <button class="bookmark_btn show_bookmark_list">
+              <i class="fa-solid fa-bookmark">
+                <span class="bookmark_text"> BOOKMARKS</span></i
+              >
+            </button>
+
+            <div class="bookmark_list show_bookmark_list">
+              <p class="bookmark_message"></p>
+              <ul class="bookmark_result_list show_bookmark_list">
+                <!-- <li class="result_list_list">
+                  <a class="result_link" href="#5ed6604591c37cdc054bcac4">
+                    <figure class="result_img">
+                      <img
+                        src="../../Resources/Images/Logo.png"
+                        alt="food_result_list"
+                        class="result_img_img"
+                      />
+                    </figure>
+                    <div class="result_data">
+                      <h4 class="result_name">
+                        Doro wot with enkulal leb leb enkulal leb leb enkulal
+                        leb leb
+                      </h4>
+                    </div>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- search result -->
+      <section class="search_result_container">
+        <div class="search_result">
+          <ul class="result_list">
+            <!-- <li class="result_list_list">
+              <a class="result_link" href="#5ed6604591c37cdc054bcac4">
+                <figure class="result_img">
+                  <img
+                    src="Logo.png"
+                    alt="food_result_list"
+                    class="result_img_img"
+                  />
+                </figure>
+                <div class="result_data">
+                  <h4 class="result_name">
+                    Doro wot with enkulal leb leb enkulal leb leb enkulal leb
+                    leb
+                  </h4>pizz
+                  <p class="result_publisher">The Pioneer Woman</p>
+                </div>
+              </a>
+            </li> -->
+          </ul>
+          <div class="pagination_btn">
+            <!-- <button class="btn_pag btn_pre_page">← page 2</button>
+            <button class="btn_pag btn_next_page">page 1 →</button> -->
+          </div>
+
+          <p class="searchResultParagraph">
+            Cooking 🧑‍🍳 is like painting 🖼️ or writing a song🎶. Just as there
+            are only so many notes or colors🎨, there are only so many flavors🤤
+            – it’s how you combine💻 them that sets you apart🍕🍔🌭🌯
+          </p>
+        </div>
+      </section>
+
+      <section class="recipe_result_main_section">
+        <!-- intro spinner -->
+        <!-- <div class="intro_spinner">
+          <img src="Logo.png" alt="spinner_logo" width="120px" height="120px" />
+        </div>-->
+
+        <!-- erorr -->
+
+        <!-- <div class="error">
+          <i class="fas fa-exclamation-triangle"
+            ><p>No recipes found for your query. Please try again!</p></i
+          >
+        </div> -->
+
+        <!-- Header__1 -->
+
+        <h2 class="header_when_noting">
+          🍔 Unlock a realm of culinary creativity 🍔 just type any food name
+          into our search, and relish the joy of cooking 🍔
+        </h2>
+        <!-- recipe_img -->
+        <!-- <figure class="recipe_fig">
+          <img src="dorowot.webp" alt="Dorowot" class="recipe_img" />
+          <h1 class="recipe__title">Doro wot with enkulal leb leb</h1>
+        </figure> -->
+        <!-- recipe details -->
+        <!-- <div class="recipe_detail"> -->
+        <!-- recipe details top -->
+        <!-- <div class="recipe_time_serv icon">
+            <div class="minute icon">
+              <i class="fa-solid fa-clock">
+                <span class="min_text"> 45 MINUTE</span></i
+              >
+            </div>
+            <div class="serving icon">
+              <i class="fa-solid fa-users"
+                ><span class="serv_text"> 4 SERVING </span></i
+              >
+              <i class="fa-solid fa-circle-plus"></i>
+              <i class="fa-solid fa-circle-minus"></i>
+            </div>
+            <div class="bookmark icon">
+              <i class="fa-solid fa-bookmark bookmark_bottom"> </i>
+            </div>
+          </div> -->
+        <!-- recipe details bottom-->
+
+        <!-- <div class="recipe_ingredients">
+            <h2 class="heading_2">RECIPE INGREDIENTS</h2>
+            <ul class="recipe_ingredient_ulist">
+              <li class="recipe_ingredient_llist">
+                <i class="fa-solid fa-check"></i>
+                <div class="recipe_quantity">1 1/2
+                  tbsps dijon mustard</div>
+               
+              </li>
+
+              <li class="recipe_ingredient_llist">
+                <i class="fa-solid fa-check"></i>
+                <div class="recipe_quantity">1 1/2
+                  tbsps dijon mustard</div>
+                
+              </li>
+            </ul>
+            
+          </div>
+          <div class="direction_link">
+            <h2 class="how_to"> HOW TO COOK
+            </h2>
+            <p class="how_to_cook_discription">
+  This recipe was carefully designed and tested by <span class="recipe_direction_user">Epicurious</span>. Please check out directions at their website 
+            </p>
+            <div class="direction_link_btn">
+            <a
+            class="recipe_btn"
+            href="http://thepioneerwoman.com/cooking/pasta-with-tomato-cream-sauce/"
+          >
+            <span>Directions <span class="arrow">→</span></span>
+          </a>
+        
+        </div>
+      </div> -->
+      </section>
+
+      <div class="overlay hidden"></div>
+      <div class="add-recipe-window hidden btn_point_event">
+        <div class="success_message"></div>
+        <button class="btn--close-modal btn_point_event_none">&times;</button>
+        <form class="upload">
+          <div class="upload__column">
+            <h3 class="upload__heading">Recipe data</h3>
+            <label>Title</label>
+            <input placeholder="Kitfo" required name="title" type="text" />
+            <label>URL</label>
+            <input
+              placeholder="http://kitfo.com"
+              required
+              name="sourceUrl"
+              type="text"
+            />
+            <label>Image URL</label>
+            <input
+              placeholder="http://kitfo.png"
+              required
+              name="image"
+              type="text"
+            />
+            <label>Publisher</label>
+            <input
+              placeholder="Temesgen"
+              required
+              name="publisher"
+              type="text"
+            />
+            <label>Prep time</label>
+            <input placeholder="30" required name="cookingTime" type="number" />
+            <label>Servings</label>
+            <input placeholder="5" required name="servings" type="number" />
+          </div>
+
+          <div class="upload__column">
+            <h3 class="upload__heading">Ingredients</h3>
+            <label>Ingredient 1</label>
+            <input
+              placeholder="0.5,kg,Misr"
+              type="text"
+              required
+              name="ingredient-1"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 2</label>
+            <input
+              placeholder="1,,kocho"
+              type="text"
+              name="ingredient-2"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 3</label>
+            <input
+              placeholder=",,salt"
+              type="text"
+              name="ingredient-3"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 4</label>
+            <input
+              type="text"
+              name="ingredient-4"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 5</label>
+            <input
+              type="text"
+              name="ingredient-5"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 6</label>
+            <input
+              type="text"
+              name="ingredient-6"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+          </div>
+
+          <div class="add_recipe_error_message"></div>
+          <button class="btn upload_btn">
+            <span>☝ Upload ☝</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
