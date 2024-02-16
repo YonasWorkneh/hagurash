@@ -8,6 +8,7 @@ const recipesDetail = document.querySelector(".recipes__wrap");
 const videosDetail = document.querySelector(".videos__wrap");
 
 let elDel;
+let isSet;
 let admin = JSON.parse(localStorage.getItem("admin"));
 
 lists.forEach((list) => {
@@ -23,6 +24,36 @@ lists.forEach((list) => {
     }
   });
 });
+for (let i = 0; i <= 100_000; i++){
+  setTimeout(function () {
+    document.querySelector('.total__recipes__num').textContent = `+${Intl.NumberFormat('en-us').format(i)}`;
+  },0.2);
+}
+// console.log(document.querySelector('total__recipes__num').textContent)
+//dark mode toggling 
+document.querySelector('.toggle-switch-background').addEventListener('click', function (e) {
+  const state = e.target.closest('.dark');
+  if (state.dataset.view === "light") {
+    console.log(state);
+    console.log(true);
+    document.querySelector('body').style.background = '#000';
+    document.querySelectorAll('.video').forEach(vid => vid.querySelector('.title').style.color = "#fff");
+    lists.forEach(list => list.style.color = "#fff");
+    document.querySelector(".admin_name").style.color = "#fff";
+    document.querySelector(".admin_email").style.color = '#fff';
+    state.closest('body').querySelectorAll('legend').forEach(legend=>legend.style.color = '#fff');
+    state.dataset.view = 'dark';
+  }
+  else{
+    console.log(false);
+    document.querySelector('body').style.background = '#fff';
+    lists.forEach(list => list.style.color = '#222');
+    state.closest('body').querySelectorAll('legend').forEach(legend => legend.style.color = '#000');
+    document.querySelector(".admin_name").style.color = "#000";
+    document.querySelector(".admin_email").style.color = '#000';
+    state.dataset.view = "light";
+  }
+})
 
 //set up the admin;
 // localStorage.clear();
@@ -38,7 +69,7 @@ if (!admin)
   );
 
 admin = JSON.parse(localStorage.getItem("admin"));
-console.log(admin);
+// console.log(admin);
 document.querySelector(".admin_name").textContent = admin.adminName;
 document.querySelector(".admin_img").src = admin.adminImg;
 document.querySelector(".admin_email").textContent = admin.adminEmail;
@@ -418,7 +449,7 @@ document.querySelector('.stat__nobook').insertAdjacentElement('beforeend', spanP
 
 // comments
 const comments = JSON.parse(localStorage.getItem('comments')) || [];
-console.log(comments);
+// console.log(comments);
 comments.forEach((comment,index) => {
   const html = `
   <p>${comment.uname}</p>
@@ -426,3 +457,21 @@ comments.forEach((comment,index) => {
   <p>${comment.usubject} <span class="see__more" data-index="${index}">See More</span></p>`;
   document.querySelector('.comm__list').insertAdjacentHTML('beforeend', html);
 });
+
+// prfoile
+document.querySelector('.admin_profile_form').addEventListener('submit', function (e) {
+  const name = document.querySelector('#admin_name').value;
+  const email = document.querySelector('#admin_email').value;
+  const pass = document.querySelector('#admin_pass').value;
+  name !== '' ? admin.adminName = name : false;
+  email !== '' ? admin.adminEmail = email : false;
+  pass !== '' ? admin.pass = pass : false;
+  document.querySelector(".admin_name").textContent = admin.adminName;
+  document.querySelector(".admin_img").src = admin.adminImg;
+  document.querySelector(".admin_email").textContent = admin.adminEmail;
+  document.querySelector('#admin_name').value = '';
+  document.querySelector('#admin_email').value = '';
+  document.querySelector('#admin_pass').value = '';
+
+  localStorage.setItem('admin', JSON.stringify(admin));
+})
