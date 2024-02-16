@@ -49,6 +49,7 @@ document.querySelector('.toggle-switch-background').addEventListener('click', fu
     document.querySelector('body').style.background = '#fff';
     lists.forEach(list => list.style.color = '#222');
     state.closest('body').querySelectorAll('legend').forEach(legend => legend.style.color = '#000');
+    document.querySelectorAll('.video').forEach(vid => vid.querySelector('.title').style.color = "#222");
     document.querySelector(".admin_name").style.color = "#000";
     document.querySelector(".admin_email").style.color = '#000';
     state.dataset.view = "light";
